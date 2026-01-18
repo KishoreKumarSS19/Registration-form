@@ -1,0 +1,165 @@
+  .midbox {
+      background-color: #0a1e3b;
+      color: hsl(183, 100%, 50%);
+      text-align: center;
+      font-family: "Michroma", sans-serif;
+      position: absolute;
+      height: fit-content;
+      width: fit-content;
+      padding: 40px;
+      top: 20%;
+      left: 33%;
+      border-radius: 50px;
+      box-shadow: 0 0 25px 5px rgba(0, 242, 255, 0.6);
+      max-width: 400px;
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+      animation: slideInUp 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      z-index: 2;
+  }
+  
+
+  .overlay {
+      background-image: url("images/back.jpeg");x
+      background-position: center;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+  }
+
+  #logo {
+      width: 300px;
+      height: 250px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+  }
+
+
+  @keyframes slideInUp {
+      to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+      }
+  }
+}
+  h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+      font-weight: 600;
+  }
+
+  .form-name {
+      margin-bottom: 24px;
+      position: relative;
+  }
+    .form-email {
+      margin-bottom: 24px;
+      position: relative;
+  }
+    .form-password {
+      margin-bottom: 24px;
+      position: relative;
+  }
+
+  input {
+      width: 300px;
+      height: 5px;
+      padding: 14px 16px;
+      border: 2px solid #e1e5e9;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+  }
+
+  input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+
+  .error {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 6px;
+      display: block;
+      min-height: 18px;
+  }
+
+  button {
+      width: 100%;
+      padding: 14px;
+      background: #B93B3B;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  }
+
+  button:hover:not(:disabled) {
+      background: #B93B3B;
+  }
+
+  button:disabled {
+      background: #a0aec0;
+      cursor: not-allowed;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 480px) {
+      body {
+          padding: 15px;
+      }
+
+      .overlay {
+          height: 100%;
+          width: 100%;
+      }
+
+      #mid {
+          padding: 30px 24px;
+          margin: 10px;
+          border-radius: 12px;
+      }
+
+      h2 {
+          font-size: 24px;
+          margin-bottom: 24px;
+      }
+
+      input {
+          padding: 16px 14px;
+          font-size: 16px;
+          /* Prevents zoom on iOS */
+      }
+
+      button {
+          padding: 16px;
+          font-size: 16px;
+      }
+
+      .error {
+          font-size: 13px;
+      }
+  }
+
+  /* Very small screens */
+  @media (max-width: 360px) {
+      #mid {
+          padding: 24px 20px;
+          margin: 5px;
+      }
+
+      h2 {
+          font-size: 22px;
+      }
+  }
